@@ -1,0 +1,68 @@
+/* index.css - Global Reset and Base Styles
+  This ensures our dark theme and centering logic 
+  work consistently across all browsers.
+*/
+
+/* 1. Reset default margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* 2. Set the root and body to occupy the full viewport */
+:root {
+  /* Ensuring the font-size is consistent */
+  font-size: 16px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  /* Using the dark color from our theme as a fallback */
+  background-color: #0f172a; 
+  /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+}
+
+/* 3. Global Typography Settings */
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f8fafc;
+}
+
+/* 4. Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 5. Center the React Root container */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 6. Form elements reset for better mobile experience */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Image and Media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 8. Clear the default focus outline for mouse users but keep it for keyboard users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
